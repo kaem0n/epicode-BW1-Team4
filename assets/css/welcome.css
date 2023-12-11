@@ -1,11 +1,3 @@
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-  font-weight: bold;
-}
 
 h1 {
   font-size: 3.5em;
@@ -14,6 +6,8 @@ h1 {
 
 h2 {
   font-size: 1.5em;
+  color: blueviolet;
+  font-weight: 700;
 }
 
 h3 {
@@ -21,11 +15,32 @@ h3 {
 }
 
 p {
-  margin: 0.5em 0;
+  margin: 0.7em 0;
+  font-size: 1.1em;
+  color:white;
+}
+
+li {
+  font-size: 1.1em;
+  color: white;
 }
 
 body {
 background-image: url(../images/bg.jpg);
 background-position: center;
 background-size: cover;
+padding: 40px 100px
+}
+
+strong {
+font-weight: 700;
+}
+
+form {
+font-size:1em;
+color:white
+}
+
+#bottonToStartExam {
+  margin-left: 150px
 }
