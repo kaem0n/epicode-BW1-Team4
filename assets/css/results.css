@@ -1,0 +1,57 @@
+body {
+  font-family: "Open Sans", sans-serif;
+  background-image: url(../images/bg.jpg);
+  background-size: cover;
+  color: aliceblue;
+}
+
+header {
+  height: 3em;
+}
+
+header img {
+  height: 60%;
+  padding-left: 3em;
+  padding-top: 1em;
+}
+
+h1 {
+  text-align: center;
+  font-size: 2em;
+}
+h2 {
+  text-align: center;
+}
+.circle {
+  width: 20em;
+  height: 20em;
+  background: linear-gradient(
+    45deg,
+    rgba(36, 0, 29, 1) 50%,
+    rgba(121, 9, 9, 1) 50%
+  );
+  border-radius: 50%;
+  text-align: center;
+  padding: 40px;
+  box-sizing: border-box;
+}
+#inside-circle {
+  width: 15em;
+  height: 15em;
+  background-image: url(../images/bg.jpg);
+  background-size: 100vw;
+  border-radius: 50%;
+  text-align: center;
+}
+
+#main-div {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  margin-top: 30px;
+  margin-bottom: 30px;
+}
+
+main {
+  text-align: center;
+}
