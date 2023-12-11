@@ -1,3 +1,5 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;700&family=Outfit:wght@400;700&display=swap");
+
 body,
 div,
 h1,
@@ -10,21 +12,21 @@ form {
 }
 
 body {
-  font-family: Arial, sans-serif;
+  font-family: "Inter", Arial, sans-serif; /* Aggiunto 'Inter' come prima scelta di font */
   background-image: url("../images/bg.jpg");
   background-size: cover;
-
   margin: 0;
   padding: 0;
 }
 
 /* feedback.css */
 header {
-  padding: 10px;
+  padding: 70px;
+  margin-left: 30px;
 }
 
 header img {
-  width: 100px;
+  height: 40px;
 }
 
 main {
@@ -35,20 +37,24 @@ main {
 }
 
 h1 {
-  font-size: 1.5em;
-  margin-bottom: 10px;
+  font-family: "Inter", sans-serif;
+  font-weight: bold;
+  font-size: 2em;
+  margin-bottom: 23px;
 }
 
 h2 {
-  font-size: 1.2em;
-  margin-bottom: 20px;
+  font-family: "Outfit", sans-serif;
+  font-size: 1.4em;
+  margin-bottom: 30px;
 }
 
 div img {
   width: 30px;
+  margin-bottom: 50px;
   margin-left: 5px;
-  opacity: 0.5; /* Trasparenza di base */
-  transition: opacity 0.3s; /*  transizione */
+  opacity: 0.1; /* Trasparenza di base */
+  transition: opacity 0s; /*  transizione */
 }
 
 div img:hover {
@@ -57,10 +63,11 @@ div img:hover {
 
 div img:active {
   color: gray;
-  filter: brightness(1.5); /* Evidenziazione al clic */
+  filter: brightness(1.5);
 }
 
 div h2 {
+  font-family: "Outfit", sans-serif;
   font-size: 1.2em;
   margin-bottom: 10px;
 }
@@ -77,14 +84,15 @@ form input {
 }
 
 form button {
-  background-color: #0fe5de; /* Colore a tua scelta */
-  color: rgba(26, 6, 105, 0.615);
-  padding: 30px; /* Modifica della grandezza del padding per aumentare la dimensione del bottone */
+  font-family: "Outfit", sans-serif;
+  font-weight: bold;
+  background-color: #0fe5de;
+  color: rgba(30, 9, 114, 0.868);
+  padding: 0px;
+  height: 55px;
+  width: 180px;
   border: none;
   cursor: pointer;
-  transition: background-color 0.3s; /* Aggiunta di una transizione al cambio di colore */
-}
-
-form button:hover {
-  background-color: #cc5500; /* Cambio colore al passaggio del mouse */
+  transition: background-color 1s, box-shadow 1s;
+  box-shadow: 0 4px 8px rgba(5, 220, 240, 0.839);
 }
