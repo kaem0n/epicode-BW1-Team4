@@ -13,15 +13,13 @@ body {
   font-family: Arial, sans-serif;
   background-image: url("../images/bg.jpg");
   background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
+
   margin: 0;
   padding: 0;
 }
 
 /* feedback.css */
 header {
-  background-color: #f2f2f2;
   padding: 10px;
 }
 
@@ -71,13 +69,17 @@ form input {
   width: 100%;
   padding: 10px;
   margin-bottom: 10px;
-  color: black;
+  color: rgb(239, 234, 234);
+  background: none;
+  border: none;
+  outline: none;
+  border-bottom: 1px solid #d20094;
 }
 
 form button {
   background-color: #0fe5de; /* Colore a tua scelta */
-  color: rgb(134, 9, 9);
-  padding: 15px; /* Modifica della grandezza del padding per aumentare la dimensione del bottone */
+  color: rgba(26, 6, 105, 0.615);
+  padding: 30px; /* Modifica della grandezza del padding per aumentare la dimensione del bottone */
   border: none;
   cursor: pointer;
   transition: background-color 0.3s; /* Aggiunta di una transizione al cambio di colore */
