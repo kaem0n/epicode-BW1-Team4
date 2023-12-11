@@ -1,0 +1,88 @@
+body,
+div,
+h1,
+h2,
+form {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  color: white;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background-image: url("../images/bg.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  margin: 0;
+  padding: 0;
+}
+
+/* feedback.css */
+header {
+  background-color: #f2f2f2;
+  padding: 10px;
+}
+
+header img {
+  width: 100px;
+}
+
+main {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+  text-align: center;
+}
+
+h1 {
+  font-size: 1.5em;
+  margin-bottom: 10px;
+}
+
+h2 {
+  font-size: 1.2em;
+  margin-bottom: 20px;
+}
+
+div img {
+  width: 30px;
+  margin-left: 5px;
+  opacity: 0.5; /* Trasparenza di base */
+  transition: opacity 0.3s; /*  transizione */
+}
+
+div img:hover {
+  opacity: 1; /* Trasparenza al passaggio del mouse */
+}
+
+div img:active {
+  color: gray;
+  filter: brightness(1.5); /* Evidenziazione al clic */
+}
+
+div h2 {
+  font-size: 1.2em;
+  margin-bottom: 10px;
+}
+
+form input {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 10px;
+  color: black;
+}
+
+form button {
+  background-color: #00fff7; /* Colore a tua scelta */
+  color: rgb(134, 9, 9);
+  padding: 15px; /* Modifica della grandezza del padding per aumentare la dimensione del bottone */
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s; /* Aggiunta di una transizione al cambio di colore */
+}
+
+form button:hover {
+  background-color: #cc5500; /* Cambio colore al passaggio del mouse */
+}
