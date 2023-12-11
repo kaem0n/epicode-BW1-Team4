@@ -25,11 +25,7 @@ h2 {
 .circle {
   width: 20em;
   height: 20em;
-  background: linear-gradient(
-    45deg,
-    rgba(36, 0, 29, 1) 50%,
-    rgba(121, 9, 9, 1) 50%
-  );
+  background: conic-gradient(#D20094 30%, #00FFFF 0);
   border-radius: 50%;
   text-align: center;
   padding: 40px;
