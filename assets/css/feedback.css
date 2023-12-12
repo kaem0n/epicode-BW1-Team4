@@ -1,3 +1,4 @@
+/* Importa i font da Google Fonts */
 @import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;700&family=Outfit:wght@400;700&display=swap");
 
 body,
@@ -12,14 +13,13 @@ form {
 }
 
 body {
-  font-family: "Inter", Arial, sans-serif; /* Aggiunto 'Inter' come prima scelta di font */
+  font-family: "Inter", Arial, sans-serif;
   background-image: url("../images/bg.jpg");
   background-size: cover;
   margin: 0;
   padding: 0;
 }
 
-/* feedback.css */
 header {
   padding: 70px;
   margin-left: 30px;
@@ -35,7 +35,10 @@ main {
   padding: 20px;
   text-align: center;
 }
-
+#container {
+  margin: 0 auto;
+  width: 495px;
+}
 h1 {
   font-family: "Inter", sans-serif;
   font-weight: bold;
@@ -49,32 +52,43 @@ h2 {
   margin-bottom: 30px;
 }
 
+/* Stile delle stelle nel div */
 div img {
   width: 30px;
   margin-bottom: 50px;
   margin-left: 5px;
-  opacity: 0.1; /* Trasparenza di base */
-  transition: opacity 0s; /*  transizione */
+  opacity: 0.1;
+  transition: opacity 0s;
 }
 
+/* Stelle al passaggio del mouse */
 div img:hover {
-  opacity: 1; /* Trasparenza al passaggio del mouse */
+  opacity: 1;
 }
 
+/* Stile delle immagini quando sono attive (cliccate) */
 div img:active {
   color: gray;
   filter: brightness(1.5);
 }
 
+/* Stile delle immagini quando sono attive o al passaggio del mouse */
+div img.active,
+div img.hover {
+  opacity: 1;
+}
+
+/* Stile dell'elemento h2 nel div */
 div h2 {
   font-family: "Outfit", sans-serif;
   font-size: 1.2em;
   margin-bottom: 10px;
 }
 
+/* Stile dell'input nel form */
 form input {
-  width: 100%;
-  padding: 10px;
+  width: 480px;
+  padding: 10px 0 10px 10px;
   margin-bottom: 10px;
   color: rgb(239, 234, 234);
   background: none;
@@ -83,9 +97,12 @@ form input {
   border-bottom: 1px solid #d20094;
 }
 
+/* Stile del pulsante nel form */
 form button {
   font-family: "Outfit", sans-serif;
   font-weight: bold;
+  font-size: 1.2em;
+  margin-top: 30px;
   background-color: #0fe5de;
   color: rgba(30, 9, 114, 0.868);
   padding: 0px;
