@@ -119,7 +119,6 @@ const questions = [
   for (let i=0; i<questionForms.length; i++) {
     questionForms[i].addEventListener('submit', function (e) {
       e.preventDefault()
-      console.log(result)
       const correctText = document.createElement('span')
       correctText.innerText = 'Corretto!'
       correctText.classList.add('correct-text')
@@ -137,6 +136,14 @@ const questions = [
           questionForms[i].classList.add('invisible')
         }
       }
-      console.log(result)
+      if (questionForms[i+1]) {
+        const submitButton = questionForms[i+1].querySelector('.special')
+        submitButton.classList.remove('invisible')
+      } else {
+        const quizEnd = document.getElementById('quiz-end')
+        quizEnd.classList.remove('invisible')
+      }
     })
   }
+
+  localStorage.setItem('result', result)
