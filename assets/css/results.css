@@ -96,3 +96,8 @@ button a {
   padding: 2.3em 2em;
   opacity: 80%;
 }
+
+.lost {
+  padding-top: 2em;
+  font-size: 1.5em;
+}
