@@ -5,11 +5,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Feedback Page</title>
     <link rel="stylesheet" href="./assets/css/reset.css" />
-    <link rel="stylesheet" href=".//assets/css/feedback.css" />
+    <link rel="stylesheet" href="./assets/css/feedback.css" />
   </head>
   <body>
     <header>
-      <img src="./assets/images/epicode_logo.png" alt="logo" />
+      <a href="./welcome.html">
+        <img src="./assets/images/epicode_logo.png" alt="logo" />
+      </a>
     </header>
     <main>
       <h1>Tell us how it's going</h1>
@@ -32,15 +34,13 @@
       <div>
         <h2>Leave us an open feedback about your experience so far</h2>
         <form>
-          <input
-            type="text"
-            placeholder="Write your comment here
-          "
-          />
-          <button>MORE INFO</button>
+          <input type="text" placeholder="Write your comment here" />
+          <a href="./results.html" class="more-info-link">
+            <button type="submit">MORE INFO</button>
+          </a>
         </form>
       </div>
     </main>
-    <script src="./js/script.js"></script>
+    <script src="./js/feedback.js"></script>
   </body>
 </html>
