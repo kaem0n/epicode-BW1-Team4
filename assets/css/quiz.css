@@ -11,15 +11,8 @@ body {
     text-align: center;
 }
 
-h1 {
-    font-family: 'Outfit', sans-serif;
-    font-size: 40px;
-    margin-bottom: 40px;
-}
-
 header {
     display: flex;
-    justify-content: space-between;
     padding: 40px 100px;
 }
 
@@ -27,10 +20,24 @@ header img {
     height: 40px;
 }
 
+#clock {
+    position: sticky;
+    top: 60px;
+    text-align: right;
+    margin-right: 60px;
+}
+
 main {
     margin: 0 auto;
-    margin-top: 30px;
     width: 65vw;
+}
+
+
+h1 {
+    font-family: 'Outfit', sans-serif;
+    font-size: 40px;
+    margin-bottom: 40px;
+    margin-top: 30px;
 }
 
 h2 {
@@ -95,7 +102,8 @@ input {
     border: none;
     cursor: pointer;
     transition: background-color 1s, box-shadow 1s;
-    box-shadow: 0 4px 8px rgba(5, 220, 240, 0.839);
+    box-shadow: 0.5px 1px 7px 7px rgba(24, 183, 197, 0.428);
+    border-radius: 1px;
 }
 
 span {
