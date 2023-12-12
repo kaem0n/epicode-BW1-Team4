@@ -1,5 +1,5 @@
-@import url("https://fonts.googleapis.com/css2?family=Outfit:wght@400;700&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;700&family=Outfit:wght@400;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Outfit:wght@400;600;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Outfit:wght@400;700&display=swap");
 
 body {
   font-family: "Inter", sans-serif;
@@ -37,6 +37,7 @@ h2 {
 h1 + p {
   font-size: 1.5em;
   margin-top: 0.2em;
+  font-family: "Outfit", sans-serif;
 }
 
 .circle {
@@ -80,10 +81,12 @@ button a {
 }
 
 #wrong {
+  font-family: "Outfit", sans-serif;
   text-align: right;
 }
 
 #correct {
+  font-family: "Outfit", sans-serif;
   text-align: left;
 }
 #congrats {
@@ -101,4 +104,8 @@ button a {
 .lost {
   padding-top: 2em;
   font-size: 1.5em;
+}
+h4,
+h5 {
+  font-weight: 600;
 }
