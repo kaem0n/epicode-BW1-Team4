@@ -1,12 +1,18 @@
 
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700&family=Outfit:wght@400;700&display=swap');
+
 h1 {
+  font-family: 'Outfit', sans-serif;
   font-size: 3.5em;
   color: white;
+  margin-top: 60px;
+  margin-bottom: 20px;
 }
 
 h2 {
   font-size: 1.5em;
-  color: blueviolet;
+  color: #d20094;
+  font-family: 'Outfit', sans-serif;
   font-weight: 700;
 }
 
@@ -16,16 +22,23 @@ h3 {
 
 p {
   margin: 0.7em 0;
-  font-size: 1.1em;
+  font-size: 1em;
   color:white;
 }
 
+header img {
+  height: 40px;
+}
+
 li {
-  font-size: 1.1em;
+  font-size: 1em;
   color: white;
+  margin-top:10px;
+  margin-bottom: 10px;
 }
 
 body {
+font-family: 'Inter', sans-serif;
 background-image: url(../images/bg.jpg);
 background-position: center;
 background-size: cover;
@@ -37,7 +50,7 @@ font-weight: 700;
 }
 
 form {
-font-size:1em;
+font-size:0.8em;
 color:white
 }
 
@@ -74,9 +87,4 @@ form button {
 ul {
   margin-left: 30px;
   list-style: disc;
-}
-
-li {
-  margin-top:10px;
-  margin-bottom: 10px;
 }
