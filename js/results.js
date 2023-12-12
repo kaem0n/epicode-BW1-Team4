@@ -22,3 +22,25 @@ const congratsYouPassed = function (n) {
 };
 
 congratsYouPassed(60);
+
+const correctAnswersDiv = document.getElementById("correct");
+const correctDivResults = document.createElement("div");
+
+correctDivResults.innerHTML = ` 
+<h2>Correct</h2>
+<h3>66.7%</h3>
+<p>4/6 questions</p>
+`;
+correctAnswersDiv.appendChild(correctDivResults);
+console.log(correctDivResults);
+
+const wrongAnswersDiv = document.getElementById("wrong");
+const wrongDivResults = document.createElement("div");
+
+wrongDivResults.innerHTML = ` 
+<h2>Wrong</h2>
+<h3>33.3%</h3>
+<p>2/6 questions</p>
+`;
+wrongAnswersDiv.appendChild(wrongDivResults);
+console.log(wrongDivResults);
