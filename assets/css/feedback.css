@@ -87,8 +87,8 @@ div h2 {
 
 /* Stile dell'input nel form */
 form input {
-  width: 100%;
-  padding: 10px;
+  width: 480px;
+  padding: 10px 0 10px 10px;
   margin-bottom: 10px;
   color: rgb(239, 234, 234);
   background: none;
