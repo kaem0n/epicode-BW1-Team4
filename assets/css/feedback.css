@@ -35,7 +35,10 @@ main {
   padding: 20px;
   text-align: center;
 }
-
+#container {
+  margin: 0 auto;
+  width: 495px;
+}
 h1 {
   font-family: "Inter", sans-serif;
   font-weight: bold;
@@ -99,6 +102,7 @@ form button {
   font-family: "Outfit", sans-serif;
   font-weight: bold;
   font-size: 1.2em;
+  margin-top: 30px;
   background-color: #0fe5de;
   color: rgba(30, 9, 114, 0.868);
   padding: 0px;
