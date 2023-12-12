@@ -32,6 +32,9 @@ main {
     width: 65vw;
 }
 
+.question-containers {
+    margin-bottom: 100px;
+}
 
 h1 {
     font-family: 'Outfit', sans-serif;
@@ -42,7 +45,7 @@ h1 {
 
 h2 {
     font-family: 'Outfit', sans-serif;
-    margin-bottom: 70px;
+    margin-bottom: 40px;
     text-transform: uppercase;
     letter-spacing: 3px;
     font-weight: 600;
@@ -122,4 +125,18 @@ span {
 
 .invisible {
     display: none;
+}
+
+.correct-text {
+    font-family: "Outfit", sans-serif;
+    font-size: 2em;
+    font-weight: 700;
+    color: #0fe5de;
+}
+
+.wrong-text {
+    font-family: "Outfit", sans-serif;
+    font-size: 2em;
+    font-weight: 700;
+    color: #d20094;
 }

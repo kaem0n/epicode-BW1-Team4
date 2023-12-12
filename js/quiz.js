@@ -97,3 +97,46 @@ const questions = [
       incorrect_answers: ["Python", "C", "Jakarta"],
     },
   ];
+
+  let result = 0
+
+  const questionForms = document.getElementsByClassName('question')
+  const questionContainers = document.getElementsByClassName('question-containers')
+  const answers = document.getElementsByClassName('answers')
+  
+  const unselected = function (e) {
+    const previousClicked = document.getElementsByClassName('clicked')[0]
+    if (previousClicked) {
+      previousClicked.classList.remove('clicked')
+    }
+  }
+
+  const selected = function (e) {
+    unselected()
+    e.target.classList.add('clicked')
+  }
+  
+  for (let i=0; i<questionForms.length; i++) {
+    questionForms[i].addEventListener('submit', function (e) {
+      e.preventDefault()
+      console.log(result)
+      const correctText = document.createElement('span')
+      correctText.innerText = 'Corretto!'
+      correctText.classList.add('correct-text')
+      const wrongText = document.createElement('span')
+      wrongText.innerText = 'Capra!'
+      wrongText.classList.add('wrong-text')
+      for (let j=0; j<answers.length; j++) {
+        if (answers[j].className === 'answers correct clicked') {
+          questionContainers[i].appendChild(correctText)
+          wrongText.innerText = ''
+          questionForms[i].classList.add('invisible')
+          result += 10
+        } else {
+          questionContainers[i].appendChild(wrongText)
+          questionForms[i].classList.add('invisible')
+        }
+      }
+      console.log(result)
+    })
+  }
