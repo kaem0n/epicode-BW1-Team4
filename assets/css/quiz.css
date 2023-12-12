@@ -1,0 +1,125 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Outfit:wght@400;600;700&display=swap');
+/* font-family: 'Inter', sans-serif;
+font-family: 'Outfit', sans-serif; */
+
+body {
+    font-family: 'Outfit', sans-serif;
+    background: url(../images/bg.jpg);
+    background-size: cover;
+    background-attachment: fixed;
+    color: white;
+    text-align: center;
+}
+
+header {
+    display: flex;
+    padding: 40px 100px;
+}
+
+header img {
+    height: 40px;
+}
+
+#clock {
+    position: sticky;
+    top: 60px;
+    text-align: right;
+    margin-right: 60px;
+}
+
+main {
+    margin: 0 auto;
+    width: 65vw;
+}
+
+
+h1 {
+    font-family: 'Outfit', sans-serif;
+    font-size: 40px;
+    margin-bottom: 40px;
+    margin-top: 30px;
+}
+
+h2 {
+    font-family: 'Outfit', sans-serif;
+    margin-bottom: 70px;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    font-weight: 600;
+}
+
+form{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0 auto;
+    margin-bottom: 30px;
+}
+
+form div {
+    display: flex;
+    flex-wrap: wrap;
+    width: 510px;
+    justify-content: space-between;
+}
+
+input {
+    opacity: 0px;
+    position: fixed;
+    width: 0px;
+}
+
+.answers {
+    font-family: inherit;
+    font-weight: 600;
+    background-color: rgba(255, 255, 255, 0.164);
+    color: white;
+    margin-bottom: 10px;
+    width: 240px;
+    height: 50px;
+    border-radius: 30px;
+    border: 2px solid rgba(255, 255, 255, 0.05);
+    cursor: pointer;
+    box-shadow: inset 0px -7px 15px 3px rgba(0,0,0,0.3);
+}
+
+.answers:hover {
+    background-color: #d20094;
+    border: 2px solid rgba(255, 255, 255, 0.5);
+    box-shadow: inset 0px -7px 15px 3px rgba(0,0,0,0.3);
+}
+
+.special {
+    font-family: "Outfit", sans-serif;
+    font-weight: bold;
+    margin-top: 30px;
+    background-color: #0fe5de;
+    color: rgba(30, 9, 114, 0.868);
+    padding: 0px;
+    height: 40px;
+    width: 160px;
+    border: none;
+    cursor: pointer;
+    transition: background-color 1s, box-shadow 1s;
+    box-shadow: 0.5px 1px 7px 7px rgba(24, 183, 197, 0.428);
+    border-radius: 1px;
+}
+
+span {
+    color: #d20094;
+}
+
+.clicked {
+    background-color: #d20094;
+    border: 2px solid rgba(255, 255, 255, 0.5);
+    box-shadow: inset 0px -7px 15px 3px rgba(0,0,0,0.3);
+}
+
+.visible {
+    display: inline;
+}
+
+.invisible {
+    display: none;
+}
