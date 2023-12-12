@@ -85,3 +85,14 @@ button a {
 #correct {
   text-align: left;
 }
+#congrats {
+  padding-top: 3.5em;
+}
+#congrats h5 {
+  color: #00f9fa;
+}
+#congrats p {
+  font-size: 0.8em;
+  padding: 2.3em 2em;
+  opacity: 80%;
+}
