@@ -10,7 +10,7 @@ const yourScore = (n) => {
   correctDivResults.innerHTML = ` 
   <h2>Correct</h2>
   <h3>${n}%</h3>   
-  <p>4/6 questions</p>
+  <p>${n / 10}/10 questions</p>
   `;
   correctAnswersDiv.appendChild(correctDivResults);
   console.log(correctDivResults);
@@ -21,7 +21,7 @@ const yourScore = (n) => {
   wrongDivResults.innerHTML = ` 
   <h2>Wrong</h2>
   <h3>${100 - n}%</h3>
-  <p>2/6 questions</p>
+  <p>${(100 - n) / 10}/10 questions</p>
   `;
   wrongAnswersDiv.appendChild(wrongDivResults);
   console.log(wrongDivResults);
