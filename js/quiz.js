@@ -92,12 +92,12 @@ const questions = [
       type: "multiple",
       difficulty: "easy",
       question:
-        "Which programming language shares its name with an island in Indonesia?",
+      "Which programming language shares its name with an island in Indonesia?",
       correct_answer: "Java",
       incorrect_answers: ["Python", "C", "Jakarta"],
     },
   ];
-
+  
   let result = 0
 
   const questionForms = document.getElementsByClassName('question')
@@ -143,7 +143,7 @@ const questions = [
         const quizEnd = document.getElementById('quiz-end')
         quizEnd.classList.remove('invisible')
       }
+      localStorage.setItem('result', result)
+      console.log(localStorage)
     })
   }
-
-  localStorage.setItem('result', result)
