@@ -23,8 +23,35 @@ header img {
 #clock {
     position: sticky;
     top: 60px;
-    text-align: right;
+    margin-left: auto;
     margin-right: 60px;
+    background: conic-gradient(#00ffff 0%, rgba(255, 255, 255, 0.3) 0);
+    height: 100px;
+    width: 100px;
+    border-radius: 50%;
+    padding: 10px;
+    box-sizing: border-box;
+}
+
+#circle {
+    display: inline-block;
+    background: url(../images/bg.jpg);
+    background-position: right;
+    height: 80px;
+    width: 80px;
+    border-radius: 50%;
+    box-sizing: border-box;
+}
+
+#circle span {
+    text-transform: uppercase;
+    text-align: center;
+    color: white;
+    font-size: 0.4em;
+}
+
+strong {
+    font-size: 2.3rem;
 }
 
 main {
@@ -115,6 +142,10 @@ input {
     border-radius: 1px;
 }
 
+
+
+/* JS classes */
+
 span {
     color: #d20094;
 }
@@ -123,10 +154,6 @@ span {
     background-color: #d20094;
     border: 2px solid rgba(255, 255, 255, 0.5);
     box-shadow: inset 0px -7px 15px 3px rgba(0,0,0,0.3);
-}
-
-.visible {
-    display: inline;
 }
 
 .invisible {

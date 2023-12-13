@@ -103,7 +103,8 @@ const questions = [
   const questionForms = document.getElementsByClassName('question')
   const questionContainers = document.getElementsByClassName('question-containers')
   const answers = document.getElementsByClassName('answers')
-  const clockContainer = document.getElementById('clock')
+  const clockContainer1 = document.getElementById('clock')
+  const clockContainer2 = document.getElementById('circle')
   
   const unselected = function (e) {
     const previousClicked = document.getElementsByClassName('clicked')[0]
@@ -118,12 +119,17 @@ const questions = [
   }
   
   
-let counter = 29
+let counter = 30
 let index = 0
 const clock = document.createElement('span')
 const inizializeTimer = function () {
   const timer = setInterval(function () {
-    clock.innerText = `${counter}`
+    clockContainer1.style.background = `conic-gradient(rgba(255, 255, 255, 0.3) ${
+      100 - ((counter-1) * 3.3334)
+    }%, #00ffff 0)`
+    clock.innerHTML = `seconds <br />
+    <strong>${counter-1}</strong> <br />
+    remaining`
     counter--
     if (counter === 0) {
       const timerText = document.createElement('span')
@@ -141,11 +147,11 @@ const inizializeTimer = function () {
         clock.innerText = 'END'
         clearInterval(timer)
       }
-      counter = 29
+      counter = 31
       index += 1
       console.log('index', index)
     }
-  }, 100)
+  }, 1000)
 }
 
 inizializeTimer()
@@ -179,8 +185,8 @@ for (let i=0; i<questionForms.length; i++) {
     }
     localStorage.setItem('result', result)
     console.log(localStorage)
-    counter = 29
+    counter = 31
     index += 1
   })
 }
-clockContainer.appendChild(clock)
+clockContainer2.appendChild(clock)
