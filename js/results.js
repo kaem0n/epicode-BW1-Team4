@@ -1,5 +1,5 @@
-const result = localStorage.getItem('result')
-console.log('result', result)
+const result = localStorage.getItem("result");
+console.log("result", result);
 const innerCircle = document.getElementById("inside-circle");
 const congratsDiv = document.createElement("div");
 
@@ -45,7 +45,7 @@ const congratsYouPassed = function () {
     </p>
     `;
   } else {
-    congratsDiv.innerHTML = `<h4 class= "lost">Oh no! Try again</h4>`;
+    congratsDiv.innerHTML = `<h4 class= "lost">Oh no!</h4> <a class= linkazzo href ="quiz.html">Try again</a>`;
     console.log(congratsDiv);
   }
   yourScore();
@@ -54,4 +54,13 @@ const congratsYouPassed = function () {
 };
 
 congratsYouPassed(result);
-localStorage.clear()
+localStorage.clear();
+
+const myLinkazzo = document.getElementsByClassName("linkazzo")[0];
+myLinkazzo.addEventListener("mouseover", function () {
+  myLinkazzo.style.color = "#d20094";
+});
+
+myLinkazzo.addEventListener("mouseout", function () {
+  myLinkazzo.style.color = "aliceblue";
+});
