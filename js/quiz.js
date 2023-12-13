@@ -103,6 +103,7 @@ const questions = [
   const questionForms = document.getElementsByClassName('question')
   const questionContainers = document.getElementsByClassName('question-containers')
   const answers = document.getElementsByClassName('answers')
+  const clockContainer = document.getElementById('clock')
   
   const unselected = function (e) {
     const previousClicked = document.getElementsByClassName('clicked')[0]
@@ -116,34 +117,70 @@ const questions = [
     e.target.classList.add('clicked')
   }
   
-  for (let i=0; i<questionForms.length; i++) {
-    questionForms[i].addEventListener('submit', function (e) {
-      e.preventDefault()
-      const correctText = document.createElement('span')
-      correctText.innerText = 'Corretto!'
-      correctText.classList.add('correct-text')
-      const wrongText = document.createElement('span')
-      wrongText.innerText = 'Capra!'
-      wrongText.classList.add('wrong-text')
-      for (let j=0; j<answers.length; j++) {
-        if (answers[j].className === 'answers correct clicked') {
-          questionContainers[i].appendChild(correctText)
-          wrongText.innerText = ''
-          questionForms[i].classList.add('invisible')
-          result += 10
-        } else {
-          questionContainers[i].appendChild(wrongText)
-          questionForms[i].classList.add('invisible')
-        }
-      }
-      if (questionForms[i+1]) {
-        const submitButton = questionForms[i+1].querySelector('.special')
+  
+let counter = 29
+let index = 0
+const clock = document.createElement('span')
+const inizializeTimer = function () {
+  const timer = setInterval(function () {
+    clock.innerText = `${counter}`
+    counter--
+    if (counter === 0) {
+      const timerText = document.createElement('span')
+      timerText.innerText = 'Capra!'
+      timerText.classList.add('wrong-text')
+      console.log('index', index)
+      questionContainers[index].appendChild(timerText)
+      questionForms[index].classList.add('invisible')
+      if (questionForms[index+1]) {
+        const submitButton = questionForms[index+1].querySelector('.special')
         submitButton.classList.remove('invisible')
       } else {
         const quizEnd = document.getElementById('quiz-end')
         quizEnd.classList.remove('invisible')
+        clock.innerText = 'END'
+        clearInterval(timer)
       }
-      localStorage.setItem('result', result)
-      console.log(localStorage)
-    })
-  }
+      counter = 29
+      index += 1
+      console.log('index', index)
+    }
+  }, 100)
+}
+
+inizializeTimer()
+  
+for (let i=0; i<questionForms.length; i++) {
+  questionForms[i].addEventListener('submit', function (e) {
+    e.preventDefault()
+    const correctText = document.createElement('span')
+    correctText.innerText = 'Corretto!'
+    correctText.classList.add('correct-text')
+    const wrongText = document.createElement('span')
+    wrongText.innerText = 'Capra!'
+    wrongText.classList.add('wrong-text')
+    for (let j=0; j<answers.length; j++) {
+      if (answers[j].className === 'answers correct clicked') {
+        questionContainers[i].appendChild(correctText)
+        wrongText.innerText = ''
+        questionForms[i].classList.add('invisible')
+        result += 10
+      } else {
+        questionContainers[i].appendChild(wrongText)
+        questionForms[i].classList.add('invisible')
+      }
+    }
+    if (questionForms[i+1]) {
+      const submitButton = questionForms[i+1].querySelector('.special')
+      submitButton.classList.remove('invisible')
+    } else {
+      const quizEnd = document.getElementById('quiz-end')
+      quizEnd.classList.remove('invisible')
+    }
+    localStorage.setItem('result', result)
+    console.log(localStorage)
+    counter = 29
+    index += 1
+  })
+}
+clockContainer.appendChild(clock)
