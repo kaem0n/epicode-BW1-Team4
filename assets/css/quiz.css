@@ -25,7 +25,7 @@ header img {
     top: 60px;
     margin-left: auto;
     margin-right: 60px;
-    background: conic-gradient(#00ffff 0%, rgba(255, 255, 255, 0.3) 0);
+    background: conic-gradient(#00ffff 100%, rgba(255, 255, 255, 0.3) 0);
     height: 100px;
     width: 100px;
     border-radius: 50%;

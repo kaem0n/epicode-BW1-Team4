@@ -105,6 +105,7 @@ const questions = [
   const answers = document.getElementsByClassName('answers')
   const clockContainer1 = document.getElementById('clock')
   const clockContainer2 = document.getElementById('circle')
+  const placeholder = document.getElementById('placeholder')
   
   const unselected = function (e) {
     const previousClicked = document.getElementsByClassName('clicked')[0]
@@ -127,6 +128,7 @@ const inizializeTimer = function () {
     clockContainer1.style.background = `conic-gradient(rgba(255, 255, 255, 0.3) ${
       100 - ((counter-1) * 3.3334)
     }%, #00ffff 0)`
+    placeholder.classList.add('invisible')
     clock.innerHTML = `seconds <br />
     <strong>${counter-1}</strong> <br />
     remaining`
