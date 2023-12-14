@@ -146,6 +146,10 @@ const timer = setInterval(function () {
       if (questionForms[index+1]) {
         const submitButton = questionForms[index+1].querySelector('.special')
         submitButton.classList.remove('invisible')
+        const answerButtons = questionForms[index+1].querySelectorAll('.answers')
+        for (let i=0; i<answerButtons.length; i++) {
+          answerButtons[i].removeAttribute('disabled')
+        }
       } else {
         const quizEnd = document.getElementById('quiz-end')
         quizEnd.classList.remove('invisible')
@@ -178,6 +182,7 @@ for (let i=0; i<questionForms.length; i++) {
         questionContainers[i].appendChild(correctText)
         wrongText.innerText = ''
         questionForms[i].classList.add('invisible')
+        answers[j].classList.remove('clicked')
         result += 10
       } else {
         questionContainers[i].appendChild(wrongText)
