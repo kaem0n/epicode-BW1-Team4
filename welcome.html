@@ -13,30 +13,55 @@
     </header>
     <br />
     <main>
-      <h1>Welcome to <br><strong>your exam</strong></h1>
-      <br>
+      <h1>Welcome to <br /><strong>your exam</strong></h1>
+      <br />
       <h2>Instructions</h2>
       <p>
-        We don't expect most engineers to know the answer to all of these <br>
+        We don't expect most engineers to know the answer to all of these <br />
         questions, so don't worry if you're unsure of a few of them.
       </p>
       <br />
       <ul>
-        <li>Each question is <strong>timed</strong> and can only be <strong>answered once.</strong></li>
         <li>
-          Changing browser tab or opening other windows <strong>invalidate the
-          question.</strong>
+          Each question is <strong>timed</strong> and can only be
+          <strong>answered once.</strong>
+        </li>
+        <li>
+          Changing browser tab or opening other windows
+          <strong>invalidate the question.</strong>
         </li>
         <li>This exam will take approx. <strong>0-5 minutes.</strong></li>
       </ul>
-      <br/>
-      <form action="./quiz.html">
-        <input type="checkbox" name="checkbox" required>
-          <strong>I promise to answer myself without help from anyone </strong></input>
-        <button id="bottonToStartExam">PROCEED
-       </button> 
+      <br />
+      <form id="main-form">
+        <p>Select the difficulty:</p>
+        <ol>
+          <li>
+            <input type="radio" id="easy" name="difficulty" /><label for="easy"
+              ><strong>EASY</strong>: 4 questions - 60 seconds timer</label
+            >
+          </li>
+          <li>
+            <input type="radio" id="medium" name="difficulty" /><label
+              for="medium"
+              ><strong>MEDIUM</strong>: 8 questions - 30 seconds timer
+            </label>
+          </li>
+          <li>
+            <input type="radio" id="hard" name="difficulty" /><label for="hard"
+              ><strong>HARD</strong>: 10 questions - 20 seconds timer</label
+            >
+          </li>
+        </ol>
+        <input type="checkbox" id="checkbox" name="checkbox" required />
+        <label for="checkbox"
+          ><strong
+            >I promise to answer myself without help from anyone
+          </strong></label
+        >
+        <button>PROCEED</button>
       </form>
     </main>
-    <script src="./js/script.js"></script>
+    <script src="./js/welcome.js"></script>
   </body>
 </html>

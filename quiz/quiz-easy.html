@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Questions Page - BW1 Team 4</title>
+    <link rel="stylesheet" href="../assets/css/reset.css" />
+    <link rel="stylesheet" href="../assets/css/quiz.css" />
+  </head>
+  <body>
+    <header>
+      <img src="../assets/images/epicode_logo.png" alt="logo" />
+    </header>
+    <div id="clock">
+      <div id="circle">
+        <span id="placeholder"
+          >seconds <br />
+          <strong>30</strong> <br />
+          remaining</span
+        >
+      </div>
+    </div>
+    <main>
+      <div class="question-containers">
+        <h1>What does CPU stand for?</h1>
+        <form class="question">
+          <div>
+            <button
+              onclick="selected(event)"
+              type="button"
+              class="answers correct"
+            >
+              Central Process Unit
+            </button>
+            <button onclick="selected(event)" type="button" class="answers">
+              Central Processing Unit
+            </button>
+            <button onclick="selected(event)" type="button" class="answers">
+              Computer Personal Unit
+            </button>
+            <button onclick="selected(event)" type="button" class="answers">
+              Central Processor Unit
+            </button>
+          </div>
+          <button class="special">CONFERMA</button>
+        </form>
+        <h2>Question 1<span>/10</span></h2>
+      </div>
+      <div class="question-containers">
+        <h1>
+          In the programming language Java, which of these keywords would you
+          put on a variable to make sure it doesn't get modified?
+        </h1>
+        <form class="question">
+          <div>
+            <button
+              onclick="selected(event)"
+              type="button"
+              class="answers correct"
+              disabled
+            >
+              Final
+            </button>
+            <button
+              onclick="selected(event)"
+              type="button"
+              class="answers"
+              disabled
+            >
+              Static
+            </button>
+            <button
+              onclick="selected(event)"
+              type="button"
+              class="answers"
+              disabled
+            >
+              Private
+            </button>
+            <button
+              onclick="selected(event)"
+              type="button"
+              class="answers"
+              disabled
+            >
+              Public
+            </button>
+          </div>
+          <button class="special invisible">CONFERMA</button>
+        </form>
+        <h2>Question 2<span>/10</span></h2>
+      </div>
+      <div class="question-containers">
+        <h1>The logo for Snapchat is a Bell.</h1>
+        <form class="question">
+          <div>
+            <button
+              onclick="selected(event)"
+              type="button"
+              class="answers"
+              disabled
+            >
+              True
+            </button>
+            <button
+              onclick="selected(event)"
+              type="button"
+              class="answers correct"
+              disabled
+            >
+              False
+            </button>
+          </div>
+          <button class="special invisible">CONFERMA</button>
+        </form>
+        <h2>Question 3<span>/10</span></h2>
+      </div>
+      <div class="question-containers">
+        <h1>
+          Pointers were not used in the original C programming language; they
+          were added later on in C++.
+        </h1>
+        <form class="question">
+          <div>
+            <button
+              onclick="selected(event)"
+              type="button"
+              class="answers"
+              disabled
+            >
+              True
+            </button>
+            <button
+              onclick="selected(event)"
+              type="button"
+              class="answers correct"
+              disabled
+            >
+              False
+            </button>
+          </div>
+          <button class="special invisible">CONFERMA</button>
+        </form>
+        <h2>Question 4<span>/10</span></h2>
+      </div>
+      <div id="quiz-end" class="invisible">
+        <form action="../results.html">
+          <h3>Complimenti! Hai finito il test!</h3>
+          <button class="special">VAI AI RISULTATI</button>
+        </form>
+      </div>
+    </main>
+    <script src="../js/quiz/quiz-easy.js"></script>
+  </body>
+</html>

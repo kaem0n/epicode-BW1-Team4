@@ -1,4 +1,6 @@
 const result = localStorage.getItem("result");
+const index = localStorage.getItem('index')
+const multiplier = localStorage.getItem('multiplier')
 console.log("result", result);
 const innerCircle = document.getElementById("inside-circle");
 const congratsDiv = document.createElement("div");
@@ -12,7 +14,7 @@ const yourScore = () => {
   correctDivResults.innerHTML = ` 
   <h2>Correct</h2>
   <h3>${result}%</h3>   
-  <p>${result / 10}/10 questions</p>
+  <p>${Number(result) / Number(multiplier)}/${index} questions</p>
   `;
   correctAnswersDiv.appendChild(correctDivResults);
   console.log(correctDivResults);
@@ -23,7 +25,7 @@ const yourScore = () => {
   wrongDivResults.innerHTML = ` 
   <h2>Wrong</h2>
   <h3>${100 - result}%</h3>
-  <p>${(100 - result) / 10}/10 questions</p>
+  <p>${index - (Number(result) / Number(multiplier))}/${index} questions</p>
   `;
   wrongAnswersDiv.appendChild(wrongDivResults);
   console.log(wrongDivResults);

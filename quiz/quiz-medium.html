@@ -4,12 +4,12 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Questions Page - BW1 Team 4</title>
-    <link rel="stylesheet" href="./assets/css/reset.css" />
-    <link rel="stylesheet" href="./assets/css/quiz.css" />
+    <link rel="stylesheet" href="../assets/css/reset.css" />
+    <link rel="stylesheet" href="../assets/css/quiz.css" />
   </head>
   <body>
     <header>
-      <img src="./assets/images/epicode_logo.png" alt="logo" />
+      <img src="../assets/images/epicode_logo.png" alt="logo" />
     </header>
     <div id="clock">
       <div id="circle">
@@ -312,82 +312,13 @@
         </form>
         <h2>Question 8<span>/10</span></h2>
       </div>
-      <div class="question-containers">
-        <h1>Linux was first created as an alternative to Windows XP.</h1>
-        <form class="question">
-          <div>
-            <button
-              onclick="selected(event)"
-              type="button"
-              class="answers"
-              disabled
-            >
-              True
-            </button>
-            <button
-              onclick="selected(event)"
-              type="button"
-              class="answers correct"
-              disabled
-            >
-              False
-            </button>
-          </div>
-          <button class="special invisible">CONFERMA</button>
-        </form>
-        <h2>Question 9<span>/10</span></h2>
-      </div>
-      <div class="question-containers">
-        <h1>
-          Which programming language shares its name with an island in
-          Indonesia?
-        </h1>
-        <form class="question">
-          <div>
-            <button
-              onclick="selected(event)"
-              type="button"
-              class="answers"
-              disabled
-            >
-              Jakarta
-            </button>
-            <button
-              onclick="selected(event)"
-              type="button"
-              class="answers"
-              disabled
-            >
-              C
-            </button>
-            <button
-              onclick="selected(event)"
-              type="button"
-              class="answers"
-              disabled
-            >
-              Python
-            </button>
-            <button
-              onclick="selected(event)"
-              type="button"
-              class="answers correct"
-              disabled
-            >
-              Java
-            </button>
-          </div>
-          <button class="special invisible">CONFERMA</button>
-        </form>
-        <h2>Question 10<span>/10</span></h2>
-      </div>
       <div id="quiz-end" class="invisible">
-        <form action="./results.html">
+        <form action="../results.html">
           <h3>Complimenti! Hai finito il test!</h3>
           <button class="special">VAI AI RISULTATI</button>
         </form>
       </div>
     </main>
-    <script src="./js/quiz.js"></script>
+    <script src="../js/quiz/quiz-medium.js"></script>
   </body>
 </html>

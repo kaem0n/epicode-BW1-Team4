@@ -99,6 +99,7 @@ const questions = [
   ];
   
   let result = 0
+  let multiplier = 12.5
 
   const questionForms = document.getElementsByClassName('question')
   const questionContainers = document.getElementsByClassName('question-containers')
@@ -132,7 +133,7 @@ const timer = setInterval(function () {
     <strong>${counter-1}</strong> <br />
     remaining`
     counter -= 1
-    if (index === 10) {
+    if (index === 8) {
       clearInterval(timer)
     } else if (counter === 0) {
       const timerText = document.createElement('span')
@@ -176,7 +177,7 @@ for (let i=0; i<questionForms.length; i++) {
         questionContainers[i].appendChild(correctText)
         wrongText.innerText = ''
         questionForms[i].classList.add('invisible')
-        result += 10
+        result += 12.5
       } else {
         questionContainers[i].appendChild(wrongText)
         questionForms[i].classList.add('invisible')
@@ -195,8 +196,10 @@ for (let i=0; i<questionForms.length; i++) {
     localStorage.setItem('result', result)
     console.log(localStorage)
     index += 1
+    localStorage.setItem('index', index)
     console.log(index)
   })
 }
 
+localStorage.setItem('multiplier', multiplier)
 clockContainer2.appendChild(clock)
