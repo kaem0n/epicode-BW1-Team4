@@ -166,6 +166,12 @@ for (let i=0; i<questionForms.length; i++) {
     wrongText.innerText = 'Capra!'
     wrongText.classList.add('wrong-text')
     for (let j=0; j<answers.length; j++) {
+      if (questionForms[i+1]) {
+        const answerButtons = questionForms[i+1].querySelectorAll('.answers')
+        for (let k=0; k<answerButtons.length; k++) {
+          answerButtons[k].removeAttribute('disabled')
+        }
+      }
       if (answers[j].className === 'answers correct clicked') {
         questionContainers[i].appendChild(correctText)
         wrongText.innerText = ''
