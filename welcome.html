@@ -37,32 +37,53 @@
         <p>Select the difficulty:</p>
         <ol>
           <li>
-            <input type="radio" id="easy" name="difficulty" /><label for="easy"
+            <label for="easy"
               ><strong>EASY</strong>: 4 questions - 60 seconds timer - 2/4
-              questions to pass</label
-            >
+              questions to pass<input
+                class="radio"
+                type="radio"
+                id="easy"
+                name="difficulty" />
+              <span class="newradio"></span
+            ></label>
           </li>
           <li>
-            <input type="radio" id="medium" name="difficulty" /><label
-              for="medium"
+            <label for="medium"
               ><strong>MEDIUM</strong>: 8 questions - 30 seconds timer - 5/8
               questions to pass
-            </label>
+              <input
+                class="radio"
+                type="radio"
+                id="medium"
+                name="difficulty"
+                checked />
+              <span class="newradio"></span
+            ></label>
           </li>
           <li>
-            <input type="radio" id="hard" name="difficulty" /><label for="hard"
+            <label for="hard"
               ><strong>HARD</strong>: 10 questions - 20 seconds timer - 7/10
-              questions to pass</label
-            >
+              questions to pass<input
+                class="radio"
+                type="radio"
+                id="hard"
+                name="difficulty" /><span class="newradio"></span
+            ></label>
           </li>
         </ol>
-        <input type="checkbox" id="checkbox" name="checkbox" required />
-        <label for="checkbox"
-          ><strong
-            >I promise to answer myself without help from anyone
-          </strong></label
-        >
-        <button>PROCEED</button>
+        <div id="checkbox-container">
+          <label for="checkbox"
+            ><strong
+              >I promise to answer myself without help from anyone </strong
+            ><input
+              type="checkbox"
+              id="checkbox"
+              name="checkbox"
+              required
+            /><span id="newcheckbox"></span>
+          </label>
+          <button>PROCEED</button>
+        </div>
       </form>
     </main>
     <script src="./js/welcome.js"></script>

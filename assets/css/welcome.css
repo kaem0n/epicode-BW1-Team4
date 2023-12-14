@@ -71,7 +71,6 @@ form button {
   font-family: "Outfit", sans-serif;
   font-weight: 700;
   font-size: 1.2em;
-  margin-top: 30px;
   background-color: #0fe5de;
   color: rgba(30, 9, 114, 0.868);
   padding: 0px;
@@ -82,9 +81,123 @@ form button {
   transition: background-color 1s, box-shadow 1s;
   box-shadow: 0.5px 1px 7px 7px rgba(24, 183, 197, 0.428);
   border-radius: 1px;
+  margin-left: 230px;
 }
 
 ul {
   margin-left: 30px;
   list-style: disc;
+}
+
+/* RADIO/CHECKBOX CUSTOMIZATION */
+
+label {
+  display: block;
+  position: relative;
+  padding-left: 35px;
+  margin-bottom: 12px;
+}
+
+.radio {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  height: 0;
+  width: 0;
+}
+
+.newradio {
+  cursor: pointer;
+  position: absolute;
+  top: -1px;
+  left: 8px;
+  height: 10px;
+  width: 10px;
+  background-color: #0b113b;
+  border: 2px solid white;
+  border-radius: 50%;
+}
+
+.newradio:hover {
+  background-color: #2f366d;
+}
+
+.radio:checked ~ .newradio {
+  background-color: #2f366d;
+}
+
+.newradio::after {
+  content: "";
+  position: absolute;
+  display: none;
+}
+
+.radio:checked ~ .newradio::after {
+  display: block;
+}
+
+label .newradio::after {
+  top: 3px;
+  left: 3px;
+  width: 4px;
+  height: 4px;
+  border-radius: 50%;
+  background: white;
+}
+
+#checkbox-container {
+  display: flex;
+  align-items: center;
+  margin-top: 40px;
+}
+
+#checkbox {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  height: 1;
+  width: 1;
+  top: 0px;
+  left: 5px;
+}
+
+#newcheckbox {
+  cursor: pointer;
+  position: absolute;
+  top: -2px;
+  left: 8px;
+  height: 10px;
+  width: 10px;
+  background-color: #0b113b;
+  border: 2px solid white;
+}
+
+#newcheckbox:hover {
+  background-color: #2f366d;
+}
+
+#checkbox:checked ~ #newcheckbox {
+  background-color: #2f366d;
+}
+
+#newcheckbox::after {
+  content: "";
+  position: absolute;
+  display: none;
+}
+
+#checkbox:checked ~ #newcheckbox::after {
+  display: block;
+}
+
+label #newcheckbox::after {
+  left: 2px;
+  top: -2px;
+  width: 5px;
+  height: 9px;
+  border: solid white;
+  border-width: 0 2px 2px 0;
+  -webkit-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  transform: rotate(45deg);
 }
