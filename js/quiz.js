@@ -123,17 +123,18 @@ const questions = [
 let counter = 30
 let index = 0
 const clock = document.createElement('span')
-const inizializeTimer = function () {
-  const timer = setInterval(function () {
-    clockContainer1.style.background = `conic-gradient(rgba(255, 255, 255, 0.3) ${
-      100 - ((counter-1) * 3.3334)
+const timer = setInterval(function () {
+  clockContainer1.style.background = `conic-gradient(rgba(255, 255, 255, 0.3) ${
+    100 - ((counter-1) * 3.3334)
     }%, #00ffff 0)`
     placeholder.classList.add('invisible')
     clock.innerHTML = `seconds <br />
     <strong>${counter-1}</strong> <br />
     remaining`
-    counter--
-    if (counter === 0) {
+    counter -= 1
+    if (index === 10) {
+      clearInterval(timer)
+    } else if (counter === 0) {
       const timerText = document.createElement('span')
       timerText.innerText = 'Capra!'
       timerText.classList.add('wrong-text')
@@ -146,17 +147,14 @@ const inizializeTimer = function () {
       } else {
         const quizEnd = document.getElementById('quiz-end')
         quizEnd.classList.remove('invisible')
-        clock.innerText = 'END'
+        clock.innerHTML = `<br /><strong>END</strong>`
         clearInterval(timer)
       }
       counter = 31
       index += 1
       console.log('index', index)
     }
-  }, 1000)
-}
-
-inizializeTimer()
+}, 1000)
   
 for (let i=0; i<questionForms.length; i++) {
   questionForms[i].addEventListener('submit', function (e) {
@@ -181,14 +179,18 @@ for (let i=0; i<questionForms.length; i++) {
     if (questionForms[i+1]) {
       const submitButton = questionForms[i+1].querySelector('.special')
       submitButton.classList.remove('invisible')
+      counter = 31
     } else {
       const quizEnd = document.getElementById('quiz-end')
       quizEnd.classList.remove('invisible')
+      clock.innerHTML = `<br /><strong>END</strong>`
+      clearInterval(timer)
     }
     localStorage.setItem('result', result)
     console.log(localStorage)
-    counter = 31
     index += 1
+    console.log(index)
   })
 }
+
 clockContainer2.appendChild(clock)
