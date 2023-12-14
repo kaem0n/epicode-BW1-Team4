@@ -69,7 +69,7 @@ form input {
 
 form button {
   font-family: "Outfit", sans-serif;
-  font-weight: bold;
+  font-weight: 700;
   font-size: 1.2em;
   margin-top: 30px;
   background-color: #0fe5de;
@@ -80,7 +80,8 @@ form button {
   border: none;
   cursor: pointer;
   transition: background-color 1s, box-shadow 1s;
-  box-shadow: 0 4px 8px rgba(5, 220, 240, 0.839);
+  box-shadow: 0.5px 1px 7px 7px rgba(24, 183, 197, 0.428);
+  border-radius: 1px;
 }
 
 ul {

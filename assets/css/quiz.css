@@ -128,7 +128,7 @@ input {
 
 .special {
     font-family: "Outfit", sans-serif;
-    font-weight: bold;
+    font-weight: 700;
     margin-top: 30px;
     background-color: #0fe5de;
     color: rgba(30, 9, 114, 0.868);
@@ -216,7 +216,7 @@ ul a {
 
 #end-button {
     font-family: "Outfit", sans-serif;
-    font-weight: bold;
+    font-weight: 700;
     font-size: 1.2em;
     margin-top: 30px;
     background-color: #0fe5de;

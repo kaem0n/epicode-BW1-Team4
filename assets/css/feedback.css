@@ -99,7 +99,7 @@ form input {
 /* Stile del pulsante nel form */
 form button {
   font-family: "Outfit", sans-serif;
-  font-weight: bold;
+  font-weight: 700;
   font-size: 1.2em;
   margin-top: 30px;
   background-color: #0fe5de;
