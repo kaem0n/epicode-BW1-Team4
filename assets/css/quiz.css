@@ -173,3 +173,64 @@ span {
     font-weight: 700;
     color: #d20094;
 }
+
+/* FAREWELL PROPERTIES */
+
+#final-h1 {
+    font-weight: 600;
+}
+
+h4 {
+    margin-bottom: 50px;
+    font-size: 1.2em;
+}
+
+h5 {
+    margin-bottom: 20px;
+    font-size: 1.2em;
+}
+
+a {
+    color: #d20094;
+    text-decoration: none;
+}
+
+ul {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    font-size: 1.2em;
+    width: 200px;
+    margin: 0 auto;
+    margin-bottom: 50px;
+}
+
+li {
+    display: block;
+    line-height: 25px;
+}
+
+ul a {
+    color: #0fe5de;
+}
+
+#end-button {
+    font-family: "Outfit", sans-serif;
+    font-weight: bold;
+    font-size: 1.2em;
+    margin-top: 30px;
+    background-color: #0fe5de;
+    color: rgba(30, 9, 114, 0.868);
+    padding: 0 10px;
+     height: 55px;
+    width: 180px;
+    border: none;
+    cursor: pointer;
+    transition: background-color 1s, box-shadow 1s;
+    box-shadow: 0.5px 1px 7px 7px rgba(24, 183, 197, 0.428);
+    border-radius: 1px;
+}
+
+#end-button a {
+    color: inherit;
+}

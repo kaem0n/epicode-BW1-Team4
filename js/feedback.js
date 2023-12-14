@@ -32,8 +32,5 @@ document.addEventListener("DOMContentLoaded", function () {
 
   moreInfoButton.addEventListener("click", function (event) {
     event.preventDefault();
-
-    // Reindirizza a results.html
-    window.location.href = "./results.html";
   });
 });
