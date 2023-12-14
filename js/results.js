@@ -1,6 +1,7 @@
 const result = localStorage.getItem("result");
 const index = localStorage.getItem('index')
 const multiplier = localStorage.getItem('multiplier')
+const scoreToPass = localStorage.getItem('scoreToPass')
 console.log("result", result);
 const innerCircle = document.getElementById("inside-circle");
 const congratsDiv = document.createElement("div");
@@ -37,7 +38,7 @@ const yourScore = () => {
 };
 
 const congratsYouPassed = function () {
-  if (result >= 60) {
+  if (result >= Number(scoreToPass)) {
     congratsDiv.innerHTML = `
     <h4>Congratulations!</h4>
     <h5>You passed the exam</h5>
@@ -46,8 +47,14 @@ const congratsYouPassed = function () {
     Check your email (including promotions / spam folder)
     </p>
     `;
-  } else {
-    congratsDiv.innerHTML = `<h4 class= "lost">Oh no!</h4> <a class= linkazzo href ="quiz.html">Try again</a>`;
+  } else if (scoreToPass === '70') {
+    congratsDiv.innerHTML = `<h4 class= "lost">Oh no!</h4> <a class="linkazzo" href ="quiz/quiz-hard.html">Try again</a>`;
+    console.log(congratsDiv);
+  } else if (scoreToPass === '60') {
+    congratsDiv.innerHTML = `<h4 class= "lost">Oh no!</h4> <a class="linkazzo" href ="quiz/quiz-medium.html">Try again</a>`;
+    console.log(congratsDiv);
+  } else if (scoreToPass === '50') {
+    congratsDiv.innerHTML = `<h4 class= "lost">Oh no!</h4> <a class="linkazzo" href ="quiz/quiz-easy.html">Try again</a>`;
     console.log(congratsDiv);
   }
   yourScore();

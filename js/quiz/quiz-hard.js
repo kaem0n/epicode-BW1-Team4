@@ -99,7 +99,8 @@ const questions = [
   ];
   
   let result = 0
-  let multiplier = 10
+  const multiplier = 10
+  const scoreToPass = 70
 
   const questionForms = document.getElementsByClassName('question')
   const questionContainers = document.getElementsByClassName('question-containers')
@@ -202,4 +203,5 @@ for (let i=0; i<questionForms.length; i++) {
 }
 
 localStorage.setItem('multiplier', multiplier)
+localStorage.setItem('scoreToPass', scoreToPass)
 clockContainer2.appendChild(clock)

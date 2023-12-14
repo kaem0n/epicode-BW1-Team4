@@ -99,7 +99,8 @@ const questions = [
   ];
   
   let result = 0
-  let multiplier
+  const multiplier = 25
+  const scoreToPass = 50
 
   const questionForms = document.getElementsByClassName('question')
   const questionContainers = document.getElementsByClassName('question-containers')
@@ -121,19 +122,19 @@ const questions = [
   }
   
   
-let counter = 30
+let counter = 60
 let index = 0
 const clock = document.createElement('span')
 const timer = setInterval(function () {
   clockContainer1.style.background = `conic-gradient(rgba(255, 255, 255, 0.3) ${
-    100 - ((counter-1) * 3.3334)
+    100 - ((counter-1) * 1.6667)
     }%, #00ffff 0)`
     placeholder.classList.add('invisible')
     clock.innerHTML = `seconds <br />
     <strong>${counter-1}</strong> <br />
     remaining`
     counter -= 1
-    if (index === 10) {
+    if (index === 4) {
       clearInterval(timer)
     } else if (counter === 0) {
       const timerText = document.createElement('span')
@@ -151,7 +152,7 @@ const timer = setInterval(function () {
         clock.innerHTML = `<br /><strong>END</strong>`
         clearInterval(timer)
       }
-      counter = 31
+      counter = 61
       index += 1
       console.log('index', index)
     }
@@ -177,7 +178,7 @@ for (let i=0; i<questionForms.length; i++) {
         questionContainers[i].appendChild(correctText)
         wrongText.innerText = ''
         questionForms[i].classList.add('invisible')
-        result += 10
+        result += 25
       } else {
         questionContainers[i].appendChild(wrongText)
         questionForms[i].classList.add('invisible')
@@ -186,7 +187,7 @@ for (let i=0; i<questionForms.length; i++) {
     if (questionForms[i+1]) {
       const submitButton = questionForms[i+1].querySelector('.special')
       submitButton.classList.remove('invisible')
-      counter = 31
+      counter = 61
     } else {
       const quizEnd = document.getElementById('quiz-end')
       quizEnd.classList.remove('invisible')
@@ -202,4 +203,5 @@ for (let i=0; i<questionForms.length; i++) {
 }
 
 localStorage.setItem('multiplier', multiplier)
+localStorage.setItem('scoreToPass', scoreToPass)
 clockContainer2.appendChild(clock)
